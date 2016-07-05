@@ -23,7 +23,7 @@ controller.setupWebserver(PORT, function (err, webserver) {
 controller.on('slash_command', function (bot, message) {
   // Validate Slack verify token
   if (message.token !== VERIFY_TOKEN) {
-    return bot.res.send(401, 'Unauthorized' + ' message.token is ' + message.token + '.' + ' VERIFY_TOKEN is ' + VERIFY_TOKEN + ' SLACK_VERIFY_TOKEN is ' + SLACK_VERIFY_TOKEN);
+    return bot.res.send(401, 'Unauthorized' + ' message.token is ' + message.token + '.' + ' VERIFY_TOKEN is ' + VERIFY_TOKEN + ' SLACK_VERIFY_TOKEN is ' + process.env.SLACK_VERIFY_TOKEN);
   }
 
   switch (message.command) {
