@@ -2,7 +2,8 @@ var botkit = require('botkit')
 var logger = require('morgan')
 
 // Beep Boop specifies the port you should listen on default to 8080 for local dev
-var PORT = process.env.PORT || 8080
+var PORT = process.env.PORT || 8080;
+var VERIFY_TOKEN = process.env.SLACK_VERIFY_TOKEN;
 
 var controller = botkit.slackbot()
 
