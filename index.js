@@ -28,9 +28,12 @@ controller.on('slash_command', function (bot, message) {
 
   switch (message.command) {
     case '/beepboop':
-      bot.replyPrivate(message, 'boopbeep')
-      break
+      bot.replyPrivate(message, 'boopbeep');
+      break;
+    case '/food':
+      bot.replyPrivate(message, 'Sounds like you\'re hungry.  How about "Is dinner planned for sometime soon?  Can I help?');
+      break;
     default:
-      bot.replyPrivate(message, "Sorry, I'm not sure what that command is")
+      bot.replyPrivate(message, "Sorry, I'm not sure what that command is");
   }
 })
